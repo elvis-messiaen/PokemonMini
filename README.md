@@ -21,3 +21,5 @@ jeu de pokemen avec trois pokemon
 
 - choisir le pokemon qui attaque et celui qui se defend
   => exemple pikatchu.attaquer(pokeo);
+
+amusez vous bien
