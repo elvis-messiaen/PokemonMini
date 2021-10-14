@@ -14,9 +14,9 @@ public class Main {
 
         PokemonPlante poke = new PokemonPlante("pokeplanteOne", 300, 200, "plante");
 
-        poke.attaquer(pokemonFeu);
+        pokemonFeu.attaquer(poke);
 
-        poke.display(poke, pokemonFeu);
+        poke.display(pokemonFeu, poke);
 
     }
 }

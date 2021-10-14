@@ -19,7 +19,7 @@ public class PokemonFeu extends Pokemon {
             vie -= attaque;
             p.setHp(vie);
         }else if(this.getType().equals("feu") && p.getType().equals("eau")){
-            attaque = (attaque / 2);
+            attaque = (int)(0.5 * attaque);
             vie -= attaque;
             p.setHp(vie);
         }else{
@@ -28,6 +28,7 @@ public class PokemonFeu extends Pokemon {
         }
         return p.getHp();
     }
+
     public void display (Pokemon attaquant, Pokemon defense){
         System.out.println(attaquant.getNom()
                 + " attaque Le pokemon "

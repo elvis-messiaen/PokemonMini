@@ -20,7 +20,7 @@ public class PokemonPlante extends Pokemon{
             vie -= attaque;
             p.setHp(vie);
         }else if(this.getType().equals("plante") && p.getType().equals("feu")){
-            attaque = (attaque / 2);
+            attaque = (int)(0.5 * attaque);
             vie -= attaque;
             p.setHp(vie);
         }else{

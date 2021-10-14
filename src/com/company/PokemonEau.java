@@ -19,7 +19,7 @@ public class PokemonEau extends Pokemon{
             vie -= attaque;
             p.setHp(vie);
         }else if(this.getType().equals("eau") && p.getType().equals("plante")){
-            attaque = (attaque / 2);
+            attaque = (int)(0.5 * attaque);
             vie -= attaque;
             p.setHp(vie);
         }else{
