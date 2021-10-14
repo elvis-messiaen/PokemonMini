@@ -28,7 +28,18 @@ public class PokemonFeu extends Pokemon {
         }
         return p.getHp();
     }
-
+    public void display (Pokemon attaquant, Pokemon defense){
+        System.out.println(attaquant.getNom()
+                + " attaque Le pokemon "
+                + defense.getNom()
+                + "\n"
+                + "Il viens de subir une attaque enflammé"
+                + "\n"
+                +"Il lui reste "
+                + defense.getHp()
+                + " points de vie");
+        attaquant.life(defense);
+    }
 
     @Override
     public String toString() {

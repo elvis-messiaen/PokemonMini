@@ -13,19 +13,39 @@ public class PokemonPlante extends Pokemon{
 
     @Override
     public int attaquer(Pokemon p) {
-
-        if(this.getType().equals("feu") && p.getType().equals("plante")){
-         //   p.setHp(getHp()/2);
-
-
-
-          //  p.hp -= this.getAtk();
+        int vie = p.getHp();
+        int attaque = getAtk();
+        if(this.getType().equals("plante") && p.getType().equals("eau")){
+            attaque = (attaque * 2);
+            vie -= attaque;
+            p.setHp(vie);
+        }else if(this.getType().equals("plante") && p.getType().equals("feu")){
+            attaque = (attaque / 2);
+            vie -= attaque;
+            p.setHp(vie);
+        }else{
+            vie -= attaque;
+            p.setHp(vie);
         }
-        return getHp();
+        return p.getHp();
     }
+    public void display (Pokemon attaquant, Pokemon defense){
+        System.out.println(attaquant.getNom()
+                + " attaque Le pokemon "
+                + defense.getNom()
+                + "\n"
+                + "Il viens de subir une attaque enracinement"
+                + "\n"
+                +"Il lui reste "
+                + defense.getHp()
+                + " points de vie");
+        attaquant.life(defense);
+    }
+
+
 
     @Override
     public String toString() {
-        return super.toString();
+        return "PokemonEau{}";
     }
 }

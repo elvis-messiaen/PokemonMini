@@ -8,22 +8,15 @@ public class Main {
         Pokemon plante = new Pokemon("attaque", 800, 600, "plante");
 
 
-        PokemonFeu pokemonFeu = new PokemonFeu("pokeFeu", 600, 150, "feu");
-        PokemonEau pokemonEau = new PokemonEau("pokeHo",200,250,"eau");
-        PokemonPlante poke = new PokemonPlante("pokeplanteOne", 300, 600, "plante");
+        PokemonFeu pokemonFeu = new PokemonFeu("pokeFeu", 200, 150, "feu");
 
-        pokemonFeu.attaquer(normal);
+        PokemonEau pokemonEau = new PokemonEau("pokeHo", 400, 250, "eau");
 
-        System.out.println(pokemonFeu.getNom()
-                + " attaque Le pokemon "
-                + normal.getNom()
-                + " viens de subir une attaque, il lui reste "
-                + "\n"
-                + normal.getHp()
-                + " points de vie");
-        poke.life(normal);
+        PokemonPlante poke = new PokemonPlante("pokeplanteOne", 300, 200, "plante");
 
+        poke.attaquer(pokemonFeu);
 
+        poke.display(poke, pokemonFeu);
 
     }
 }

@@ -1,9 +1,5 @@
 package com.company;
-/*
-    les Pokémon de type Feu sont super efficaces contre les Pokémon de type Plante
-    et leur infligent deux fois plus de dégâts (2*atk).
 
- */
 public class PokemonEau extends Pokemon{
     public PokemonEau(String nom, int hp, int atk, String type) {
         super(nom, hp, atk, type);
@@ -31,6 +27,18 @@ public class PokemonEau extends Pokemon{
             p.setHp(vie);
         }
         return p.getHp();
+    }
+    public void display (Pokemon attaquant, Pokemon defense){
+        System.out.println(attaquant.getNom()
+                + " attaque Le pokemon "
+                + defense.getNom()
+                + "\n"
+                + "Il viens de subir une attaque d'eau"
+                + "\n"
+                +"Il lui reste "
+                + defense.getHp()
+                + " points de vie");
+        attaquant.life(defense);
     }
 
 
