@@ -42,9 +42,13 @@ public class Pokemon {
         this.atk = atk;
     }
 
-    public String getType() {return type;}
+    public String getType() {
+        return type;
+    }
 
-    public void setType(String type) {this.type = type;}
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public boolean isDead() {
         if (this.hp <= 0) {
@@ -54,6 +58,11 @@ public class Pokemon {
         return isDead;
     }
 
+    public void life(Pokemon p) {
+        if(p.isDead()){
+            System.out.println("votre Pokemon viens de mourir");
+        }
+    }
 
     public int attaquer(Pokemon p) {
         p.hp -= this.getAtk();

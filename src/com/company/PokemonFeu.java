@@ -10,21 +10,28 @@ public class PokemonFeu extends Pokemon {
     public int getHp() {
         return super.getHp();
     }
-
     @Override
     public int attaquer(Pokemon p) {
+        int vie = p.getHp();
+        int attaque = getAtk();
         if(this.getType().equals("feu") && p.getType().equals("plante")){
-         //   p.setHp(getHp()/2);
-            p.setHp(getHp()/2);
-             super.attaquer(p);
-
-          //  p.hp -= this.getAtk();
+            attaque = (attaque * 2);
+            vie -= attaque;
+            p.setHp(vie);
+        }else if(this.getType().equals("feu") && p.getType().equals("eau")){
+            attaque = (attaque / 2);
+            vie -= attaque;
+            p.setHp(vie);
+        }else{
+            vie -= attaque;
+            p.setHp(vie);
         }
-        return getHp();
+        return p.getHp();
     }
+
 
     @Override
     public String toString() {
-        return super.toString();
+        return "PokemonFeu{}";
     }
 }

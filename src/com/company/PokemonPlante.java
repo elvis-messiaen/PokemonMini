@@ -2,19 +2,26 @@ package com.company;
 
 public class PokemonPlante extends Pokemon{
 
-    @Override
-    public boolean isDead() {
-        return super.isDead();
-    }
-
-    @Override
-    public int attaquer(Pokemon p) {
-        return super.attaquer(p);
+    public PokemonPlante(String nom, int hp, int atk, String type) {
+        super(nom, hp, atk, type);
     }
 
     @Override
     public int getHp() {
         return super.getHp();
+    }
+
+    @Override
+    public int attaquer(Pokemon p) {
+
+        if(this.getType().equals("feu") && p.getType().equals("plante")){
+         //   p.setHp(getHp()/2);
+
+
+
+          //  p.hp -= this.getAtk();
+        }
+        return getHp();
     }
 
     @Override

@@ -3,21 +3,26 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Pokemon feu = new Pokemon("defenseur", 600, 300,"feu");
+        Pokemon normal = new Pokemon("normal", 300, 300, "feu");
 
-        Pokemon plante = new Pokemon("attaque", 600, 600,"plante");
+        Pokemon plante = new Pokemon("attaque", 800, 600, "plante");
 
-        PokemonFeu pokemonFeu = new PokemonFeu("pokeFeu", 600,100,"feu");
-        pokemonFeu.attaquer(plante);
-        System.out.println( pokemonFeu.getNom()
-                +  " attaque Le pokemon "
-                + feu.getNom()
-                + " Il lui reste "
+
+        PokemonFeu pokemonFeu = new PokemonFeu("pokeFeu", 600, 150, "feu");
+        PokemonEau pokemonEau = new PokemonEau("pokeHo",200,250,"eau");
+        PokemonPlante poke = new PokemonPlante("pokeplanteOne", 300, 600, "plante");
+
+        pokemonFeu.attaquer(normal);
+
+        System.out.println(pokemonFeu.getNom()
+                + " attaque Le pokemon "
+                + normal.getNom()
+                + " viens de subir une attaque, il lui reste "
                 + "\n"
-                + plante.getHp()
+                + normal.getHp()
                 + " points de vie");
-        System.out.println(plante.isDead());
-        System.out.println(plante);
+        poke.life(normal);
+
 
 
     }
